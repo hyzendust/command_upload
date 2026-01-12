@@ -92,9 +92,7 @@ sudo mv upload.sh /usr/local/bin/upload
 
     upload -C -e
 
-### History is saved in this file (can be changed in script):
-
-~/.uploaded_files.txt
+--History is saved in this file by default (can be changed in script): ~/.uploaded_files.txt
 
 --Each line format: YYYY-MM-DD HH:MM:SS | filename | URL
 
