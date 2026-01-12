@@ -42,101 +42,91 @@ sudo mv upload.sh /usr/local/bin/upload
 
 ### Basic upload:
 
-upload -f path/to/file.png
+    upload -f path/to/file.png
 
 ### Upload with authentication:
 
-upload -f file.png -u user:password
+    upload -f file.png -u user:password
 
 ### Upload and copy URL to clipboard:
 
-upload -f file.png -c
+    upload -f file.png -c
 
 ### Specify a custom upload URL:
 
-upload -f file.png -U https://upload.example.com
+    upload -f file.png -U https://upload.example.com
 
 ### Add custom headers and form fields:
 
-upload -f file.png -H "X-API-Key: key" -F "extra=field"
+    upload -f file.png -H "X-API-Key: key" -F "extra=field"
 
 ### Take screenshot and upload:
 
-upload -s/--screenshot\
-for a full-screen screenshot, upload -s --full
+    upload -s/--screenshot\
+    for a full-screen screenshot, upload -s --full
 
 ### Pastebin:
-cat log.txt | upload -p\
-echo "Hello World" | upload -p -c 
+    cat log.txt | upload -p\
+    echo "Hello World" | upload -p -c 
 
 ### Delete uploaded file(s):
 
-upload -d file.png file2.pdf\
-upload -d https://example.com/file.png file2.pdf
+    upload -d file.png file2.pdf\
+    upload -d https://example.com/file.png file2.pdf
 
 ## Viewing History:
 
 ### Recent Uploads (Outputs all uploads (oldest → newest) with timestamp, filename, and URL)
 
-upload -r
+    upload -r
 
 ### Check all uploads (active first, then expired):
 
-upload -C
+    upload -C
 
 ### Check only active uploads:
 
-upload -C -a
+    upload -C -a
 
 ### Check only expired uploads:
 
-upload -C -e
+    upload -C -e
 
 ### History is saved in this file (can be changed in script):
 
 ~/.uploaded_files.txt
 
-Each line format:
+--Each line format: YYYY-MM-DD HH:MM:SS | filename | URL
 
-YYYY-MM-DD HH:MM:SS | filename | URL
+--Tracks last 100 uploads.
 
-    Used for tracking last 100 uploads.
+--recent flag outputs the contents of the file.
 
-    --recent shows chronological uploads.
-
-    --check verifies if URLs are still active.
+--check flag checks all the URLs from the file and shows if they are still active.
 
 ## Colors
 
-    Green: Successful uploads
+Green: Successful uploads
 
-    Orange: URL copied to clipboard
+Orange: URL copied to clipboard
 
-    Red: Expired uploads
+Red: Expired uploads
 
 ### Disable color output:
 
-upload -f file.png --no-color
+    upload -f file.png --no-color
 
 ## Requirements
 
-    Bash 4+
+Bash 4+, curl
 
-    curl
+For clipboard copying: xclip(Linux), pbcopy(MacOS)
 
-    Optional for clipboard copying:
-
-        Linux: xclip
-
-        macOS: pbcopy
-
-    Optional for Screenshot uploading:
-
-        grim, slurp
+For screenshot uploading: grim, slurp
 
 ## License
 
 MIT License - https://mit-license.org/ 
 
 ### Author
-Created by psychhim – https://github.com/hexZoN3/command_upload
+Created by hyzen – https://github.com/hyzendust/command_upload
