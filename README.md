@@ -76,7 +76,17 @@ sudo mv upload.sh /usr/local/bin/upload
 
 ## Viewing History:
 
-### Recent Uploads (Outputs all uploads (oldest → newest) with timestamp, filename, and URL)
+--History is saved in this file by default (can be changed in script): ~/.uploaded_files.txt
+
+--Each line format: YYYY-MM-DD HH:MM:SS | filename | URL
+
+--Tracks last 100 uploads.
+
+--recent flag outputs the contents of the file.
+
+--check flag checks all the URLs from the file and shows if they are still active.
+
+### Only to see recent uploads (Outputs all uploads (oldest → newest) with timestamp, filename, and URL)
 
     upload -r
 
@@ -91,16 +101,6 @@ sudo mv upload.sh /usr/local/bin/upload
 ### Check only expired uploads:
 
     upload -C -e
-
---History is saved in this file by default (can be changed in script): ~/.uploaded_files.txt
-
---Each line format: YYYY-MM-DD HH:MM:SS | filename | URL
-
---Tracks last 100 uploads.
-
---recent flag outputs the contents of the file.
-
---check flag checks all the URLs from the file and shows if they are still active.
 
 ### Disable color output:
 
