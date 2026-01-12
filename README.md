@@ -102,7 +102,7 @@ sudo mv upload.sh /usr/local/bin/upload
 
     upload -C -e
 
-### Disable color output:
+## Disable color output:
 
     upload -f file.png --no-color
 
