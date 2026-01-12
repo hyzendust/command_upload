@@ -27,7 +27,7 @@
 
 1. Clone this repository or download `upload.sh`:
 
-git clone https://github.com/psychhim/command_upload.git
+git clone https://github.com/hyzendust/command_upload.git
 cd upload.sh
 
 2. Make the script executable:
@@ -103,14 +103,6 @@ sudo mv upload.sh /usr/local/bin/upload
 --recent flag outputs the contents of the file.
 
 --check flag checks all the URLs from the file and shows if they are still active.
-
-## Colors
-
-Green: Successful uploads
-
-Orange: URL copied to clipboard
-
-Red: Expired uploads
 
 ### Disable color output:
 
