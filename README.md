@@ -27,16 +27,16 @@
 
 1. Clone this repository or download `upload.sh`:
 
-    git clone https://github.com/hyzendust/command_upload.git
-    cd upload.sh
+        git clone https://github.com/hyzendust/command_upload.git
+        cd upload.sh
 
 2. Make the script executable:
 
-    chmod +x upload.sh
+        chmod +x upload.sh
 
 3. Optionally, move it to a directory in your PATH for global access:
 
-    sudo mv upload.sh /usr/local/bin/upload
+        sudo mv upload.sh /usr/local/bin/upload
 
 ## Usage
 
